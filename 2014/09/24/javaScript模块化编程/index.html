@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -90,12 +90,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Muzipan's  Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="JavaScript 模块化编程*前言The Moudle Pattern,模块模式，也译为模组模式，是一种通用的对代码进行模块化组织与定义的方式。Modules是指实现某一特定功能的一组方法和代码。许多现代语言都定义了模块化的组织方式，比如Golang和java,他们都使用package与import来管理和使用模块，而目前版本的javascript并未提供一种原生的、语言级别的模块化组织模式，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript模块化编程">
+<meta property="og:url" content="http://yoursite.com/2014/09/24/javaScript模块化编程/index.html">
 <meta property="og:site_name" content="Muzipan's  Blog">
+<meta property="og:description" content="JavaScript 模块化编程*前言The Moudle Pattern,模块模式，也译为模组模式，是一种通用的对代码进行模块化组织与定义的方式。Modules是指实现某一特定功能的一组方法和代码。许多现代语言都定义了模块化的组织方式，比如Golang和java,他们都使用package与import来管理和使用模块，而目前版本的javascript并未提供一种原生的、语言级别的模块化组织模式，">
+<meta property="og:updated_time" content="2016-09-24T09:29:22.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Muzipan's  Blog">
+<meta name="twitter:title" content="javaScript模块化编程">
+<meta name="twitter:description" content="JavaScript 模块化编程*前言The Moudle Pattern,模块模式，也译为模组模式，是一种通用的对代码进行模块化组织与定义的方式。Modules是指实现某一特定功能的一组方法和代码。许多现代语言都定义了模块化的组织方式，比如Golang和java,他们都使用package与import来管理和使用模块，而目前版本的javascript并未提供一种原生的、语言级别的模块化组织模式，">
 
 
 
@@ -116,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2014/09/24/javaScript模块化编程/"/>
 
-  <title> Muzipan's  Blog </title>
+  <title> javaScript模块化编程 | Muzipan's  Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -139,9 +143,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -250,10 +252,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2014/09/24/javaScript模块化编程/" itemprop="url">
-                  javaScript模块化编程
-                </a>
+                javaScript模块化编程
               
             
           </h1>
@@ -312,9 +311,7 @@
       
 
       
-        
-          
-            <h3 id="JavaScript-模块化编程"><a href="#JavaScript-模块化编程" class="headerlink" title="JavaScript 模块化编程"></a>JavaScript 模块化编程</h3><p>*前言<br>The Moudle Pattern,模块模式，也译为模组模式，是一种通用的对代码进行模块化组织与定义的方式。Modules是指实现某一特定功能的一组方法和代码。许多现代语言都定义了模块化的组织方式，比如Golang和java,他们都使用package与import来管理和使用模块，而目前版本的javascript并未提供一种原生的、语言级别的模块化组织模式，而是将模块化方法交由开发者实现。因此，出现了很多种javaScript模块化的实现方式，比如，CommonJS Moudles、AMD等等。<br>以AMD为例，该规范使用fefine函数来定义模块。使用AMD规范进行模块化编程是很简单的，大致上的结构是这样的：</p>
+        <h3 id="JavaScript-模块化编程"><a href="#JavaScript-模块化编程" class="headerlink" title="JavaScript 模块化编程"></a>JavaScript 模块化编程</h3><p>*前言<br>The Moudle Pattern,模块模式，也译为模组模式，是一种通用的对代码进行模块化组织与定义的方式。Modules是指实现某一特定功能的一组方法和代码。许多现代语言都定义了模块化的组织方式，比如Golang和java,他们都使用package与import来管理和使用模块，而目前版本的javascript并未提供一种原生的、语言级别的模块化组织模式，而是将模块化方法交由开发者实现。因此，出现了很多种javaScript模块化的实现方式，比如，CommonJS Moudles、AMD等等。<br>以AMD为例，该规范使用fefine函数来定义模块。使用AMD规范进行模块化编程是很简单的，大致上的结构是这样的：</p>
 <pre><code>define(factory(){
  // 模块代码
  // return something;
@@ -587,138 +584,59 @@ if ( typeof window === &quot;object&quot; &amp;&amp; typeof window.document === 
 </code></pre><p>我觉得这个写得有些复杂了，我也未必需要我的库带有 noConflict 方法。不过，它也可以是个不错的参考。 </p>
 <h4 id="JavaScript-模块化的未来"><a href="#JavaScript-模块化的未来" class="headerlink" title="JavaScript 模块化的未来"></a>JavaScript 模块化的未来</h4><p>未来的模块化方案会是什么样的？我不知道，但不管将来如何演化，作为一种模式，模块模式是不会过时和消失的。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/06/10/hello-world/" itemprop="url">
-                  Hello HEXO
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-06-10T09:21:55+08:00" content="2014-06-10">
-              2014-06-10
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/06/10/hello-world/" rel="next" title="Hello HEXO">
+                <i class="fa fa-chevron-left"></i> Hello HEXO
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -726,6 +644,10 @@ if ( typeof window === &quot;object&quot; &amp;&amp; typeof window.document === 
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -745,8 +667,17 @@ if ( typeof window === &quot;object&quot; &amp;&amp; typeof window.document === 
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/史迪奇.gif"
@@ -853,6 +784,17 @@ if ( typeof window === &quot;object&quot; &amp;&amp; typeof window.document === 
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-模块化编程"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 模块化编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块模式"><span class="nav-number">1.1.</span> <span class="nav-text">模块模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包与IIFE-Immediately-Invoked-Function-Expression"><span class="nav-number">1.1.1.</span> <span class="nav-text">闭包与IIFE(Immediately-Invoked Function Expression)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数输入"><span class="nav-number">1.2.</span> <span class="nav-text">参数输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块输出"><span class="nav-number">1.3.</span> <span class="nav-text">模块输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出简单的对象"><span class="nav-number">1.4.</span> <span class="nav-text">输出简单的对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出函数"><span class="nav-number">1.5.</span> <span class="nav-text">输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Revealing-Module-Pattern"><span class="nav-number">1.6.</span> <span class="nav-text">Revealing Module Pattern</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块模式的变化"><span class="nav-number">2.</span> <span class="nav-text">模块模式的变化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展"><span class="nav-number">2.1.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#松耦合扩展（Loose-Augmentation）"><span class="nav-number">2.2.</span> <span class="nav-text">松耦合扩展（Loose Augmentation）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#紧耦合扩展（Tight-Augmentation）"><span class="nav-number">2.3.</span> <span class="nav-text">紧耦合扩展（Tight Augmentation）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#克隆与继承（Cloning-and-Inheritance）"><span class="nav-number">2.4.</span> <span class="nav-text">克隆与继承（Cloning and Inheritance）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子模块（Sub-modules）"><span class="nav-number">3.</span> <span class="nav-text">子模块（Sub-modules）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#各种形式的混合"><span class="nav-number">3.1.</span> <span class="nav-text">各种形式的混合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与其它模块规范或-JS-库的适配"><span class="nav-number">4.</span> <span class="nav-text">与其它模块规范或 JS 库的适配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块环境探测"><span class="nav-number">4.1.</span> <span class="nav-text">模块环境探测</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它一些-JS-库的做法"><span class="nav-number">5.</span> <span class="nav-text">其它一些 JS 库的做法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-模块化的未来"><span class="nav-number">5.1.</span> <span class="nav-text">JavaScript 模块化的未来</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -955,6 +897,10 @@ if ( typeof window === &quot;object&quot; &amp;&amp; typeof window.document === 
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
