@@ -264,6 +264,109 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/08/iframe 根据内容自适应高度/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-08T09:28:58+08:00" content="2016-11-08">
+              2016-11-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="iframe-根据内容自适应高度"><a href="#iframe-根据内容自适应高度" class="headerlink" title="iframe 根据内容自适应高度"></a>iframe 根据内容自适应高度</h3><p><hr><br>第一中方法：<br>在子页面加载完毕的时候执行                     </p>
+<pre><code>parent.document.getElementById(&quot;iframe&quot;).height=0;  
+
+parent.document.getElementById(&quot;iframe&quot;).height=document.body.scrollHeight;
+</code></pre><p>第二中方法：</p>
+<p>在主页面 iframe onLoad 时间里面写</p>
+<pre><code>function iframeLoad()  {  
+    document.getElementById(&quot;iframe&quot;).height=0;  
+    document.getElementById(&quot;iframe&quot;).height=document.getElementById(&quot;iframe&quot;).contentWindow.document.body.scrollHeight;
+}  
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/09/24/javaScript模块化编程/" itemprop="url">
                   javaScript模块化编程
                 </a>
@@ -1075,7 +1178,7 @@ gulp.task(&apos;default&apos;,[&apos;watch&apos;,&apos;webserver&apos;],function
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
