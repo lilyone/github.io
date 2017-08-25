@@ -102,7 +102,7 @@
 第二中方法：
 在主页面 iframe onLoad 时间里面写
 12">
-<meta property="og:updated_time" content="2017-08-25T02:59:22.000Z">
+<meta property="og:updated_time" content="2017-08-25T03:02:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iframe 根据内容自适应高度">
 <meta name="twitter:description" content="iframe 根据内容自适应高度第一中方法：在子页面加载完毕的时候执行123parent.document.getElementById(&quot;iframe&quot;).height=0;  parent.document.getElementById(&quot;iframe&quot;).height=document.body.scrollHeight;
@@ -330,10 +330,10 @@
       
 
       
-        <h3 id="iframe-根据内容自适应高度"><a href="#iframe-根据内容自适应高度" class="headerlink" title="iframe 根据内容自适应高度"></a>iframe 根据内容自适应高度</h3><p><hr><br>第一中方法：<br>在子页面加载完毕的时候执行<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"></div><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=document.body.scrollHeight;</div></pre></td></tr></table></figure></p>
+        <h3 id="iframe-根据内容自适应高度"><a href="#iframe-根据内容自适应高度" class="headerlink" title="iframe 根据内容自适应高度"></a>iframe 根据内容自适应高度</h3><p><hr><br>第一中方法：<br>在子页面加载完毕的时候执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"></div><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=<span class="built_in">document</span>.body.scrollHeight;</div></pre></td></tr></table></figure></p>
 <p>第二中方法：</p>
 <p>在主页面 iframe onLoad 时间里面写</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">function iframeLoad()  &#123;  </div><div class="line"> document.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"> document.getElementById(<span class="string">"iframe"</span>).height=document.getElementById(<span class="string">"iframe"</span>).contentWindow.document.body.scrollHeight;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">iframeLoad</span>(<span class="params"></span>)  </span>&#123;  </div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).height=<span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).contentWindow.document.body.scrollHeight;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
