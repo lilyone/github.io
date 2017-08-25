@@ -90,25 +90,36 @@
 
 
 
-<meta name="description" content="iframe 根据内容自适应高度第一中方法：在子页面加载完毕的时候执行123parent.document.getElementById(&quot;iframe&quot;).height=0;  parent.document.getElementById(&quot;iframe&quot;).height=document.body.scrollHeight;
-第二中方法：
-在主页面 iframe onLoad 时间里面写
-12">
+<meta name="description" content="Gulp Demo安装gulpnpm install  gulp -g  #全局安装
+查看是否安装成功gulp -v  #查看版本号
+初始化npm init  #自动配置package.json
+产生项目依赖(本地安装gulp插件）npm install gulp --save-dev  #作为项目依赖(本地安装gulp插件）
+#或者：
+npm install gulp -D
+在项目文件夹下，新建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iframe 根据内容自适应高度">
-<meta property="og:url" content="http://yoursite.com/2015/02/10/iframe 根据内容自适应高度/index.html">
+<meta property="og:title" content="GulpDemo">
+<meta property="og:url" content="http://yoursite.com/2014/06/20/Gulp/index.html">
 <meta property="og:site_name" content="Muzipan's  Blog">
-<meta property="og:description" content="iframe 根据内容自适应高度第一中方法：在子页面加载完毕的时候执行123parent.document.getElementById(&quot;iframe&quot;).height=0;  parent.document.getElementById(&quot;iframe&quot;).height=document.body.scrollHeight;
-第二中方法：
-在主页面 iframe onLoad 时间里面写
-12">
-<meta property="og:updated_time" content="2017-08-25T03:02:02.000Z">
+<meta property="og:description" content="Gulp Demo安装gulpnpm install  gulp -g  #全局安装
+查看是否安装成功gulp -v  #查看版本号
+初始化npm init  #自动配置package.json
+产生项目依赖(本地安装gulp插件）npm install gulp --save-dev  #作为项目依赖(本地安装gulp插件）
+#或者：
+npm install gulp -D
+在项目文件夹下，新建">
+<meta property="og:image" content="http://yoursite.com/2014/06/20/Gulp/01.png">
+<meta property="og:updated_time" content="2017-08-25T03:48:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iframe 根据内容自适应高度">
-<meta name="twitter:description" content="iframe 根据内容自适应高度第一中方法：在子页面加载完毕的时候执行123parent.document.getElementById(&quot;iframe&quot;).height=0;  parent.document.getElementById(&quot;iframe&quot;).height=document.body.scrollHeight;
-第二中方法：
-在主页面 iframe onLoad 时间里面写
-12">
+<meta name="twitter:title" content="GulpDemo">
+<meta name="twitter:description" content="Gulp Demo安装gulpnpm install  gulp -g  #全局安装
+查看是否安装成功gulp -v  #查看版本号
+初始化npm init  #自动配置package.json
+产生项目依赖(本地安装gulp插件）npm install gulp --save-dev  #作为项目依赖(本地安装gulp插件）
+#或者：
+npm install gulp -D
+在项目文件夹下，新建">
+<meta name="twitter:image" content="http://yoursite.com/2014/06/20/Gulp/01.png">
 
 
 
@@ -129,9 +140,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/02/10/iframe 根据内容自适应高度/"/>
+  <link rel="canonical" href="http://yoursite.com/2014/06/20/Gulp/"/>
 
-  <title> iframe 根据内容自适应高度 | Muzipan's  Blog </title>
+  <title> GulpDemo | Muzipan's  Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +282,7 @@
             
             
               
-                iframe 根据内容自适应高度
+                GulpDemo
               
             
           </h1>
@@ -283,8 +294,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-02-10T08:40:15+08:00" content="2015-02-10">
-              2015-02-10
+            <time itemprop="dateCreated" datetime="2014-06-20T15:43:35+08:00" content="2014-06-20">
+              2014-06-20
             </time>
           </span>
 
@@ -330,10 +341,201 @@
       
 
       
-        <h3 id="iframe-根据内容自适应高度"><a href="#iframe-根据内容自适应高度" class="headerlink" title="iframe 根据内容自适应高度"></a>iframe 根据内容自适应高度</h3><p><hr><br>第一中方法：<br>在子页面加载完毕的时候执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"></div><div class="line">parent.document.getElementById(<span class="string">"iframe"</span>).height=<span class="built_in">document</span>.body.scrollHeight;</div></pre></td></tr></table></figure></p>
-<p>第二中方法：</p>
-<p>在主页面 iframe onLoad 时间里面写</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">iframeLoad</span>(<span class="params"></span>)  </span>&#123;  </div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).height=<span class="number">0</span>;  </div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).height=<span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>).contentWindow.document.body.scrollHeight;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="Gulp-Demo"><a href="#Gulp-Demo" class="headerlink" title="Gulp Demo"></a>Gulp Demo</h2><h4 id="安装gulp"><a href="#安装gulp" class="headerlink" title="安装gulp"></a>安装gulp</h4><pre><code>npm install  gulp -g  #全局安装
+</code></pre><h4 id="查看是否安装成功"><a href="#查看是否安装成功" class="headerlink" title="查看是否安装成功"></a>查看是否安装成功</h4><pre><code>gulp -v  #查看版本号
+</code></pre><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><pre><code>npm init  #自动配置package.json
+</code></pre><h4 id="产生项目依赖-本地安装gulp插件）"><a href="#产生项目依赖-本地安装gulp插件）" class="headerlink" title="产生项目依赖(本地安装gulp插件）"></a>产生项目依赖(本地安装gulp插件）</h4><pre><code>npm install gulp --save-dev  #作为项目依赖(本地安装gulp插件）
+#或者：
+npm install gulp -D
+</code></pre><p>在项目文件夹下，新建build文件夹images文件夹，src文件夹，index.html   新建gulpfile.js</p>
+<pre><code>mkdir images   #mkdir用于建文件夹
+touch index.html   #touch用于创建html/js/css
+</code></pre><p>基本结构如下：<br> <img src="/2014/06/20/Gulp/01.png" alt=""></p>
+<p>下面是我自己写的测试：<br>在 common.scss里面：</p>
+<pre><code>$baseColor:red;
+</code></pre><p>在 app.scss里面：</p>
+<pre><code>@charset &apos;utf-8&apos;;
+@import &quot;./common.scss&quot;;
+body{
+    background: $baseColor;
+}
+</code></pre><p>在index.html里面：</p>
+<pre><code>    &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/build/prd/styles/app.css&quot;/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        hello Gulp!!!
+        &lt;script type=&quot;text/javascript&quot; src=&quot;/build/prd/scripts/app.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>common.js的代码：</p>
+<pre><code>module.exports = &quot;hello,webPaccfkfsadgswww!!!!!!&quot;;
+</code></pre><p>app.js的代码</p>
+<pre><code>var str = require(&apos;./common.js&apos;);
+</code></pre><p>console.log(str);</p>
+<p>####gulpfile.js</p>
+<pre><code>//引入gulp工具
+var gulp = require(&apos;gulp&apos;);
+
+//引入css预处理
+var  sass = require(&apos;gulp-sass&apos;);
+var minifyCss = require(&apos;gulp-minify-css&apos;);
+
+//引入js模块化工具 gulp-webpack,获取js文件名模块，js压缩模块：viny-named
+var named = require(&apos;vinyl-named&apos;);
+var webpack = require(&apos;gulp-webpack&apos;);
+var uglify = require(&apos;gulp-uglify&apos;);
+
+//引入 fs url模块
+var fs = require(&apos;fs&apos;);
+var url = require(&apos;url&apos;);
+
+//引入rev   revCollector
+var rev = require(&apos;gulp-rev&apos;);
+var revCollector = require(&apos;gulp-rev-collector&apos;);
+
+//引入gulp-sequence 模块
+var sequence = require(&apos;gulp-sequence&apos;);
+
+//引入gulp-webserver 模块
+var webserver = require(&apos;gulp-webserver&apos;);
+//启动webserver 
+gulp.task(&apos;webserver&apos;,function(){
+    gulp.src(&apos;./&apos;)  //server读取的目录为当前目录
+    .pipe(webserver({
+        host:&apos;localhost&apos;,
+        port:8090,
+        directoryListing:{
+            enable:true,
+            path:&apos;./&apos;   //显示项目根路径，以fekit样式显示
+        },
+        livereload:true,  //动态刷新
+
+        //mock数据
+        middleware:function(req,res,next){
+            var urlObj = url.parse(req.url,true);
+            switch(urlObj.pathname){
+                case &apos;/api/orders&apos;:
+                    res.setHeader(&apos;Content-Type&apos;,&apos;application/json&apos;);
+                    fs.readFile(&apos;./mock/list.json&apos;,function(err,data){
+                        res.end(data);
+                    });
+                    return;
+                case &apos;/api/uesers&apos;:
+                    res.setHeader(&apos;Content-Type&apos;,&apos;application/json&apos;);
+                    rs.readFile(&apos;./mock/list.json&apos;,function(err,data){
+                        res.end(data);
+                    });
+                    return;
+
+            }
+            next();
+        }
+    }))
+});
+    //编译scss
+var cssFiles = [
+    &apos;./src/styles/app.scss&apos;
+];
+gulp.task(&apos;scss&apos;,function(){
+    gulp.src(cssFiles)
+    .pipe(sass().on(&apos;error&apos;,sass.logError))
+    .pipe(minifyCss())
+    .pipe(gulp.dest(&apos;./build/prd/syles&apos;));
+});
+
+//js模块化合并和压缩
+var jsFiles = [
+    &apos;./src/scripts/app.js&apos;
+];
+gulp.task(&apos;packjs&apos;,function(){
+    gulp.src(jsFiles)
+    .pipe(named())
+    .pipe(webpack({
+        output:{
+            filename:&apos;[name].js&apos;
+        },
+        module:{
+            loaders:[
+                {
+                    test:/\.js$/,
+                    loader:&apos;imports?define=&gt;false&apos;
+                }
+            ]
+        }
+    }))
+    .pipe(uglify().on(&apos;error&apos;,function(err){
+        console.log(&apos;\x07&apos;,err.lineNumber,err.message);
+        return this.end();
+    }))
+    .pipe(gulp.dest(&apos;.build/prd/scripts&apos;))
+})
+//版本号控制
+var cssDistFiles = [
+    &apos;./build/prd/styles/app.css&apos;
+];
+var jsDistFiles = [
+    &apos;./build/prd/scripts/app.js&apos;
+];
+gulp.task(&apos;ver&apos;,function(){
+    gulp.src(cssDistFiles)
+    .pipe(rev())
+    .pipe(gulp.dest(&apos;./build/prd/styles/&apos;))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(&apos;./build/ver/styles/&apos;));
+    gulp.src(jsDistFiles)
+    .pipe(rev())
+    .pipe(gulp.dest(&apos;./build/prd/scripts/&apos;))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(&apos;./build/ver/scripts/&apos;));
+});
+gulp.task(&apos;html&apos;,function(){
+    gulp.src([&apos;./build/ver/**/*&apos;,&apos;./build/*.html&apos;])
+    .pipe(revCollector())
+    .pipe(gulp.dest(&apos;./build/&apos;));
+})
+gulp.task(&apos;min&apos;,sequence(&apos;copy-index&apos;,[&apos;ver&apos;,&apos;html&apos;]));//中括号是并行，否则为串行
+
+//拷贝index.html到build文件夹
+gulp.task(&apos;copy-index&apos;,function(){
+    gulp.src(&apos;./index.html&apos;)
+    .pipe(gulp.dest(&apos;./build&apos;));
+});
+
+//拷贝images到build文件夹
+gulp.task(&apos;copy-images&apos;,function(){
+    gulp.src(&apos;./images/**/*&apos;)
+    .pipe(gulp.dest(&apos;./build/images/&apos;));
+});
+
+//侦测文件变化  执行相应任务
+gulp.task(&apos;watch&apos;,function(){
+    gulp.watch(&apos;./index.html&apos;,[&apos;copy-index&apos;]);
+    gulp.watch(&apos;./images/*.*&apos;,[&apos;copy-images&apos;]);
+    gulp.watch(&apos;./src/styles/*.{scss,css}&apos;,[&apos;scss&apos;,&apos;min&apos;]);
+    gulp.watch(&apos;./src/scripts/*.js&apos;,[&apos;packjs&apos;],&apos;min&apos;);
+});
+
+
+//配置default    执行任务队列
+//***default是按任务列表的顺序执行的
+//gulp.task(&apos;default&apos;,[&apos;copy=index&apos;,&apos;copy-images&apos;,&apos;scss&apos;,&apos;webserver&apos;,&apos;packjs&apos;],function(){
+gulp.task(&apos;default&apos;,[&apos;watch&apos;,&apos;webserver&apos;],function(){
+    console.log(&apos;任务队列执行完毕！！！&apos;)
+})
+</code></pre><p>安装：</p>
+<pre><code>$ cnpm install gulp-rev gulp-rev-collector -D
+</code></pre><p> 将css和js 打包：</p>
+<pre><code>gulp ver
+</code></pre><p>打包index.html</p>
+<pre><code>gulp min
+</code></pre><p> 下载gulp-sequence模块</p>
+<pre><code>cnpm install gulp-sequence -D
+</code></pre>
       
     </div>
 
@@ -364,16 +566,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/09/24/javaScript模块化编程/" rel="next" title="javaScript模块化编程">
-                <i class="fa fa-chevron-left"></i> javaScript模块化编程
+              <a href="/2014/06/20/Gulp/Gulp Demo/" rel="next" title="GulpDemo">
+                <i class="fa fa-chevron-left"></i> GulpDemo
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/02/20/H1与title有什么区别/" rel="prev" title="title与H1的区别">
-                title与H1的区别 <i class="fa fa-chevron-right"></i>
+              <a href="/2014/07/02/一个DOM元素绑定多个事件时，先执行冒泡还是捕获/" rel="prev" title="一个DOM元素绑定多个事件时，先执行冒泡还是捕获">
+                一个DOM元素绑定多个事件时，先执行冒泡还是捕获 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +746,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe-根据内容自适应高度"><span class="nav-number">1.</span> <span class="nav-text">iframe 根据内容自适应高度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gulp-Demo"><span class="nav-number">1.</span> <span class="nav-text">Gulp Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装gulp"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装gulp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看是否安装成功"><span class="nav-number">1.0.2.</span> <span class="nav-text">查看是否安装成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化"><span class="nav-number">1.0.3.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生项目依赖-本地安装gulp插件）"><span class="nav-number">1.0.4.</span> <span class="nav-text">产生项目依赖(本地安装gulp插件）</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
