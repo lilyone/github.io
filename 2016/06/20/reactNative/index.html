@@ -90,16 +90,38 @@
 
 
 
-<meta name="description" content="常规法（最直观的思路）12345678910111213function unique(arr)&amp;#123;    var n = []; //创建一个新数组    for(var i = 0; i &amp;lt; arr.length; i++) &amp;#123;    //如果新数组中已经包含了当前的第i个元素，那么跳过        if (n.indexOf(arr[i]) == -1) &amp;#123">
+<meta name="description" content="React native在模拟器上的热刷新问题
+找到项目目录下的 node_modules\react-native\packager\react-packager\src\node-haste\FileWatcher\index.js
+
+
+
+打开目标文件进行修改
+保存后重启">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组去重">
-<meta property="og:url" content="http://yoursite.com/2014/09/22/数组去重/index.html">
+<meta property="og:title" content="React native在模拟器上无法热刷新">
+<meta property="og:url" content="http://yoursite.com/2016/06/20/reactNative/index.html">
 <meta property="og:site_name" content="Muzipan's  Blog">
-<meta property="og:description" content="常规法（最直观的思路）12345678910111213function unique(arr)&amp;#123;    var n = []; //创建一个新数组    for(var i = 0; i &amp;lt; arr.length; i++) &amp;#123;    //如果新数组中已经包含了当前的第i个元素，那么跳过        if (n.indexOf(arr[i]) == -1) &amp;#123">
-<meta property="og:updated_time" content="2016-11-19T09:24:13.378Z">
+<meta property="og:description" content="React native在模拟器上的热刷新问题
+找到项目目录下的 node_modules\react-native\packager\react-packager\src\node-haste\FileWatcher\index.js
+
+
+
+打开目标文件进行修改
+保存后重启">
+<meta property="og:image" content="http://yoursite.com/2016/06/20/reactNative/react.png">
+<meta property="og:image" content="http://yoursite.com/2016/06/20/reactNative/react01.png">
+<meta property="og:image" content="http://yoursite.com/2016/06/20/reactNative/react02.png">
+<meta property="og:updated_time" content="2017-08-25T04:05:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组去重">
-<meta name="twitter:description" content="常规法（最直观的思路）12345678910111213function unique(arr)&amp;#123;    var n = []; //创建一个新数组    for(var i = 0; i &amp;lt; arr.length; i++) &amp;#123;    //如果新数组中已经包含了当前的第i个元素，那么跳过        if (n.indexOf(arr[i]) == -1) &amp;#123">
+<meta name="twitter:title" content="React native在模拟器上无法热刷新">
+<meta name="twitter:description" content="React native在模拟器上的热刷新问题
+找到项目目录下的 node_modules\react-native\packager\react-packager\src\node-haste\FileWatcher\index.js
+
+
+
+打开目标文件进行修改
+保存后重启">
+<meta name="twitter:image" content="http://yoursite.com/2016/06/20/reactNative/react.png">
 
 
 
@@ -120,9 +142,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2014/09/22/数组去重/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/20/reactNative/"/>
 
-  <title> 数组去重 | Muzipan's  Blog </title>
+  <title> React native在模拟器上无法热刷新 | Muzipan's  Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +284,7 @@
             
             
               
-                数组去重
+                React native在模拟器上无法热刷新
               
             
           </h1>
@@ -274,8 +296,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-09-22T06:13:35+08:00" content="2014-09-22">
-              2014-09-22
+            <time itemprop="dateCreated" datetime="2016-06-20T17:43:35+08:00" content="2016-06-20">
+              2016-06-20
             </time>
           </span>
 
@@ -321,24 +343,14 @@
       
 
       
-        <h4 id="常规法（最直观的思路）"><a href="#常规法（最直观的思路）" class="headerlink" title="常规法（最直观的思路）"></a>常规法（最直观的思路）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = []; <span class="comment">//创建一个新数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="comment">//如果新数组中已经包含了当前的第i个元素，那么跳过</span></div><div class="line">        <span class="keyword">if</span> (n.indexOf(arr[i]) == <span class="number">-1</span>) &#123;</div><div class="line">    <span class="comment">//否则把当前项push到新数组中</span></div><div class="line">            n.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> n;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">4</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line"><span class="built_in">console</span>.log(unique(array)); <span class="comment">//输出[4,2,6,1,7,8]</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>这种方法用到了indexOf方法。其目的是寻找参数在数组中第一次出现的位置。很显然，js引擎在实现这个方法的时候会遍历数组直到找到目标为止。所以此函数会浪费掉很多时间，效率并不高。</p>
-</blockquote>
-<h4 id="第二种：hash-表"><a href="#第二种：hash-表" class="headerlink" title="第二种：hash()表"></a>第二种：hash()表</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = [];</div><div class="line">    <span class="keyword">var</span> hash = &#123;&#125;;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span> (!hash[arr[i]])<span class="comment">//如果hash表中不存在</span></div><div class="line">        &#123;</div><div class="line">            hash[arr[i]] = <span class="number">1</span>;</div><div class="line">            n.push(arr[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> n;    </div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">4</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line"><span class="built_in">console</span>.log(unique(array));<span class="comment">//输出[4,2,6,1,7,8]</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>当for循环遍历数组时，每次取出一个元素与hash表中的对象进行对比，如果这个元素不重复，则把它存放到结果数组中，同时把这个元素的内容作为对象的一个属性，并赋值为1，存入到hash表中。</p>
-</blockquote>
-<h4 id="第三种：先排序在比较相邻元素"><a href="#第三种：先排序在比较相邻元素" class="headerlink" title="第三种：先排序在比较相邻元素"></a>第三种：先排序在比较相邻元素</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    arr.sort();</div><div class="line">    <span class="keyword">var</span> n = [arr[<span class="number">0</span>]];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(arr[i] !== n[n.length<span class="number">-1</span>])&#123;</div><div class="line">            n.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> n;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">4</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line"><span class="built_in">console</span>.log(unique(array)); <span class="comment">//输出[1,2,4,6,7,8]</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>排序的时候用的JS原生的sort方法，JS引擎内部用的快速排序。最终测试的结果是此方法运行时间比上面两种都快了不少。</p>
-</blockquote>
-<p style="color:red">特殊情况：<br><br>当数组中既有数字又有字符串的时候，如： var arr = [4,2,4,6,1,”2”,4,7,8] ,此时希望2和”2″都保留，那么上述的方法无法达到要求。</p>
-
-<h4 id="第四种："><a href="#第四种：" class="headerlink" title="第四种："></a>第四种：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = [];</div><div class="line">    <span class="keyword">var</span> hash = &#123;&#125;;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span> (!hash[<span class="keyword">typeof</span>(arr[i])+arr[i]])</div><div class="line">        &#123;</div><div class="line">            hash[<span class="keyword">typeof</span>(arr[i])+arr[i]] = <span class="number">1</span>;</div><div class="line">            n.push(arr[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> n;    </div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">4</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="string">"2"</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line"><span class="built_in">console</span>.log(unique(array));<span class="comment">//输出[4,2,6,1,"2",7,8]</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>在 JavaScript 里，对象的键值只能是字符串，因此需要 typeof(arr[i])+arr[i] 来区分数值 2 和字符串 “2” 的情况。</p>
-</blockquote>
+        <h3 id="React-native在模拟器上的热刷新问题"><a href="#React-native在模拟器上的热刷新问题" class="headerlink" title="React native在模拟器上的热刷新问题"></a>React native在模拟器上的热刷新问题</h3><ol>
+<li>找到项目目录下的 node_modules\react-native\packager\react-packager\src\node-haste\FileWatcher\index.js</li>
+</ol>
+<p><img src="/2016/06/20/reactNative/react.png" alt="Gulp"></p>
+<ol>
+<li>打开目标文件进行修改<br><img src="/2016/06/20/reactNative/react01.png" alt="Gulp"><br><img src="/2016/06/20/reactNative/react02.png" alt="Gulp"></li>
+<li>保存后重启</li>
+</ol>
 
       
     </div>
@@ -370,17 +382,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/07/02/一个DOM元素绑定多个事件时，先执行冒泡还是捕获/" rel="next" title="一个DOM元素绑定多个事件时，先执行冒泡还是捕获">
-                <i class="fa fa-chevron-left"></i> 一个DOM元素绑定多个事件时，先执行冒泡还是捕获
+              <a href="/2015/02/20/H1与title有什么区别/" rel="next" title="title与H1的区别">
+                <i class="fa fa-chevron-left"></i> title与H1的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/09/24/javaScript模块化编程/" rel="prev" title="javaScript模块化编程">
-                javaScript模块化编程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +558,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常规法（最直观的思路）"><span class="nav-number">1.</span> <span class="nav-text">常规法（最直观的思路）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二种：hash-表"><span class="nav-number">2.</span> <span class="nav-text">第二种：hash()表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三种：先排序在比较相邻元素"><span class="nav-number">3.</span> <span class="nav-text">第三种：先排序在比较相邻元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四种："><span class="nav-number">4.</span> <span class="nav-text">第四种：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#React-native在模拟器上的热刷新问题"><span class="nav-number">1.</span> <span class="nav-text">React native在模拟器上的热刷新问题</span></a></li></ol></div>
             
           </div>
         </section>
